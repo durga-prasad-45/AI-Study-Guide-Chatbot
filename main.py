@@ -19,12 +19,12 @@ load_dotenv()
 
 # ------------------- API KEY CONFIGURATION ----------------
 
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = os.getenv("GORQ_API_KEY")
 
 # Also support Streamlit Cloud secrets
 if not api_key:
     try:
-        api_key = st.secrets["GEMINI_API_KEY"]
+        api_key = st.secrets["GORQ_API_KEY"]
     except (KeyError, FileNotFoundError):
         api_key = None
 
